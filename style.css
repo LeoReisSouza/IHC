@@ -40,7 +40,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 6vh 8vw;
+  padding: 6vh 4vw;
   background: var(--bg);
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .slide-content {
-  max-width: 900px;
+  max-width: 1000px;
   width: 100%;
   opacity: 0;
   transform: translateY(24px);
@@ -271,7 +271,7 @@ h2 {
 }
 
 .slide-content.wide {
-  max-width: 760px;
+  max-width: 1280px;
   max-height: 88vh;
   overflow-y: auto;
   padding-right: 0.5rem;
@@ -407,4 +407,126 @@ h2 {
 @keyframes highlight-ref {
   0% { color: var(--accent); }
   100% { color: var(--fg); }
+}
+
+.accordion-secondary {
+  margin-top: 2.5rem;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.chart-card {
+  background: rgba(32, 26, 27, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.4rem 1.5rem;
+}
+
+.chart-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 1rem;
+}
+
+.chart-caption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-top: 0.9rem;
+}
+
+.pie-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.pie-svg {
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+}
+
+.pie-legend {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--fg);
+}
+
+.legend-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+}
+
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 2fr auto;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.bar-label {
+  font-size: 0.82rem;
+  color: var(--fg);
+  overflow-wrap: break-word;
+}
+
+.bar-track {
+  background: rgba(32, 26, 27, 0.08);
+  border-radius: 6px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 6px;
+}
+
+.bar-value {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.quote-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 0 1.4rem 1.4rem 1.4rem;
+}
+
+.quote-list li {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--muted);
+  line-height: 1.6;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent);
+}
+
+@media (max-width: 720px) {
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
 }
