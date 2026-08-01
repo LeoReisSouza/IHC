@@ -1,5 +1,6 @@
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
+const summaryLinks = document.querySelectorAll(".summary-list a");
 const progressBar = document.getElementById("progress-bar");
 const scrollContainer = document.getElementById("scroll-container");
 
@@ -13,6 +14,10 @@ const observer = new IntersectionObserver(
         dots.forEach((dot) => dot.classList.remove("active"));
         const activeDot = document.querySelector(`.dot[data-index="${index}"]`);
         if (activeDot) activeDot.classList.add("active");
+
+        summaryLinks.forEach((link) => link.classList.remove("active"));
+        const activeSummary = document.querySelector(`.summary-list a[data-index="${index}"]`);
+        if (activeSummary) activeSummary.classList.add("active");
       }
     });
   },
@@ -51,7 +56,7 @@ function buildPieChart(labels, values) {
   const legend = labels
     .map(
       (label, i) =>
-        `<li><span class="legend-swatch" style="background:${chartPalette[i % chartPalette.length]}"></span>${label} — ${values[i]}</li>`
+        `<li><span class="legend-swatch" style="background:${chartPalette[i % chartPalette.length]}"></span>${label} - ${values[i]}</li>`
     )
     .join("");
 
@@ -86,6 +91,79 @@ document.querySelectorAll(".chart").forEach((el) => {
   const values = el.dataset.values.split(",").map(Number);
   el.innerHTML =
     el.dataset.chart === "pie" ? buildPieChart(labels, values) : buildBarChart(labels, values);
+});
+
+const menuToggle = document.getElementById("menu-toggle");
+const summaryPanel = document.getElementById("summary-panel");
+const summaryBackdrop = document.getElementById("summary-backdrop");
+const summaryClose = document.getElementById("summary-close");
+
+function openSummary() {
+  menuToggle.classList.add("open");
+  summaryPanel.classList.add("open");
+  summaryBackdrop.classList.add("open");
+  menuToggle.setAttribute("aria-expanded", "true");
+  summaryPanel.setAttribute("aria-hidden", "false");
+}
+
+function closeSummary() {
+  menuToggle.classList.remove("open");
+  summaryPanel.classList.remove("open");
+  summaryBackdrop.classList.remove("open");
+  menuToggle.setAttribute("aria-expanded", "false");
+  summaryPanel.setAttribute("aria-hidden", "true");
+}
+
+menuToggle.addEventListener("click", () => {
+  summaryPanel.classList.contains("open") ? closeSummary() : openSummary();
+});
+
+summaryBackdrop.addEventListener("click", closeSummary);
+summaryClose.addEventListener("click", closeSummary);
+summaryLinks.forEach((link) => link.addEventListener("click", closeSummary));
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeSummary();
+});
+
+const lightbox = document.getElementById("image-lightbox");
+const lightboxImage = document.getElementById("lightbox-image");
+const lightboxClose = document.getElementById("lightbox-close");
+
+function openLightbox(src, alt) {
+  lightboxImage.src = src;
+  lightboxImage.alt = alt;
+  lightbox.classList.add("open");
+  lightbox.setAttribute("aria-hidden", "false");
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("open");
+  lightbox.setAttribute("aria-hidden", "true");
+  lightboxImage.src = "";
+}
+
+document.querySelectorAll(".zoomable-image").forEach((button) => {
+  button.addEventListener("click", () => {
+    const img = button.querySelector("img");
+    openLightbox(button.dataset.full || img.src, img.alt);
+  });
+});
+
+lightbox.addEventListener("click", closeLightbox);
+lightboxClose.addEventListener("click", closeLightbox);
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeLightbox();
+});
+
+document.querySelectorAll(".phone-screen [data-goto]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const target = button.dataset.goto;
+    const screen = button.closest(".phone-screen");
+    screen.querySelectorAll(".app-screen").forEach((s) => {
+      s.classList.toggle("active", s.dataset.screen === target);
+    });
+  });
 });
 
 document.querySelectorAll(".accordion").forEach((accordion) => {

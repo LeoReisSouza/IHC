@@ -3,18 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Relatório Interativo — IHC</title>
+<title>Relatório Interativo - IHC</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir sumário" aria-expanded="false" aria-controls="summary-panel">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div id="summary-backdrop" class="summary-backdrop"></div>
+
+  <nav id="summary-panel" class="summary-panel" aria-hidden="true" aria-label="Sumário">
+    <div class="summary-header">
+      <span>Sumário</span>
+      <button id="summary-close" class="summary-close" type="button" aria-label="Fechar sumário">&times;</button>
+    </div>
+    <ol class="summary-list">
+      <li><a href="#slide-1" data-index="0">Título</a></li>
+      <li><a href="#slide-2" data-index="1">Contexto e o SI Projetado</a></li>
+      <li><a href="#slide-3" data-index="2">Pluralidade e Decolonialidade</a></li>
+      <li><a href="#slide-4" data-index="3">Levantamento de Requisitos</a></li>
+      <li><a href="#slide-5" data-index="4">Coleta de Dados</a></li>
+      <li><a href="#slide-6" data-index="5">Espaço do Problema</a></li>
+      <li><a href="#slide-7" data-index="6">Antecipação e Prototipação</a></li>
+      <li><a href="#slide-8" data-index="7">Avaliação</a></li>
+      <li><a href="#slide-9" data-index="8">Considerações Finais</a></li>
+      <li><a href="#slide-10" data-index="9">Protótipo Navegável</a></li>
+    </ol>
+  </nav>
+
   <nav class="dots" id="dots" aria-label="Navegação entre seções">
     <a href="#slide-1" class="dot active" data-index="0"><span>Título</span></a>
-    <a href="#slide-2" class="dot" data-index="1"><span>Pluralidade e Decolonialidade</span></a>
-    <a href="#slide-3" class="dot" data-index="2"><span>Metodologia</span></a>
-    <a href="#slide-4" class="dot" data-index="3"><span>Coleta de Dados</span></a>
-    <a href="#slide-5" class="dot" data-index="4"><span>Resultados</span></a>
-    <a href="#slide-6" class="dot" data-index="5"><span>Conclusão</span></a>
+    <a href="#slide-2" class="dot" data-index="1"><span>Contexto e o SI Projetado</span></a>
+    <a href="#slide-3" class="dot" data-index="2"><span>Pluralidade e Decolonialidade</span></a>
+    <a href="#slide-4" class="dot" data-index="3"><span>Levantamento de Requisitos</span></a>
+    <a href="#slide-5" class="dot" data-index="4"><span>Coleta de Dados</span></a>
+    <a href="#slide-6" class="dot" data-index="5"><span>Espaço do Problema</span></a>
+    <a href="#slide-7" class="dot" data-index="6"><span>Antecipação e Prototipação</span></a>
+    <a href="#slide-8" class="dot" data-index="7"><span>Avaliação</span></a>
+    <a href="#slide-9" class="dot" data-index="8"><span>Considerações Finais</span></a>
+    <a href="#slide-10" class="dot" data-index="9"><span>Protótipo Navegável</span></a>
   </nav>
 
   <div class="progress-bar" id="progress-bar"></div>
@@ -38,8 +69,38 @@
     </section>
 
     <section id="slide-2" class="slide alt" data-index="1">
-      <div class="slide-content wide">
+      <div class="slide-content">
         <p class="eyebrow">01</p>
+        <h2>Contexto e o SI Projetado</h2>
+        <p class="body-text">
+          O Sistema Interativo (SI) analisado é o aplicativo móvel de um banco,
+          utilizado diariamente para atividades financeiras do cotidiano. Este
+          projeto investiga, sob a ótica da Interação Humano-Computador, as
+          dificuldades enfrentadas por pessoas da terceira idade ao realizar
+          transferências e pagamentos - em especial via Pix - buscando
+          compreender as barreiras de uso e propor caminhos para um design
+          mais acessível e inclusivo.
+        </p>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Sistema Interativo</h3>
+            <p>Aplicativo móvel bancário (Android/iOS), com foco nas funcionalidades de Pix e Pagamentos.</p>
+          </div>
+          <div class="card">
+            <h3>Público-alvo</h3>
+            <p>Pessoas a partir dos 50 anos, com diferentes níveis de letramento digital e escolaridade.</p>
+          </div>
+          <div class="card">
+            <h3>Foco da investigação</h3>
+            <p>Dificuldades visuais, motoras e cognitivas durante transferências financeiras digitais.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="slide-3" class="slide" data-index="2">
+      <div class="slide-content wide">
+        <p class="eyebrow">02</p>
         <h2>Pluralidade e Decolonialidade</h2>
 
         <div class="accordion">
@@ -118,34 +179,36 @@
       </div>
     </section>
 
-    <section id="slide-3" class="slide" data-index="2">
+    <section id="slide-4" class="slide alt" data-index="3">
       <div class="slide-content">
-        <p class="eyebrow">02</p>
-        <h2>Metodologia</h2>
+        <p class="eyebrow">03</p>
+        <h2>Levantamento de Requisitos</h2>
         <p class="body-text">
-          Descreva aqui os métodos, técnicas e ferramentas utilizadas para
-          conduzir a pesquisa ou o estudo de caso.
+          Para levantar os requisitos do projeto, foram combinadas duas abordagens
+          complementares: a aplicação de um questionário estruturado com usuários
+          reais e uma análise qualitativa baseada no framework PACT (Pessoas,
+          Atividades, Contexto e Tecnologias).
         </p>
         <div class="card-grid">
           <div class="card">
-            <h3>Etapa 1</h3>
-            <p>Descrição breve da primeira etapa metodológica.</p>
+            <h3>Formulário online</h3>
+            <p>Questionário aplicado a pessoas de diferentes faixas etárias, com perguntas sobre idade, escolaridade, frequência de uso e principais dificuldades ao usar o aplicativo.</p>
           </div>
           <div class="card">
-            <h3>Etapa 2</h3>
-            <p>Descrição breve da segunda etapa metodológica.</p>
+            <h3>Análise PACT</h3>
+            <p>Investigação das diferenças físicas e psicológicas dos usuários, do contexto físico, social e organizacional de uso, e das tecnologias envolvidas na tarefa.</p>
           </div>
           <div class="card">
-            <h3>Etapa 3</h3>
-            <p>Descrição breve da terceira etapa metodológica.</p>
+            <h3>Relatos abertos</h3>
+            <p>Coleta de respostas dissertativas sobre dificuldades, medos e sugestões de melhoria relatadas pelos próprios participantes.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="slide-4" class="slide alt" data-index="3">
+    <section id="slide-5" class="slide" data-index="4">
       <div class="slide-content wide">
-        <p class="eyebrow">03</p>
+        <p class="eyebrow">04</p>
         <h2>Coleta de Dados</h2>
         <p class="body-text">
           A pesquisa de campo reuniu 12 participantes, entre pessoas com 60 anos
@@ -219,40 +282,332 @@
       </div>
     </section>
 
-    <section id="slide-5" class="slide" data-index="4">
-      <div class="slide-content">
-        <p class="eyebrow">04</p>
-        <h2>Resultados</h2>
+    <section id="slide-6" class="slide alt" data-index="5">
+      <div class="slide-content wide">
+        <p class="eyebrow">05</p>
+        <h2>Espaço do Problema</h2>
         <p class="body-text">
-          Apresente aqui os principais resultados obtidos, com dados,
-          gráficos ou imagens que sustentem os achados.
+          A partir da coleta de dados, foram definidos perfis, personas, cenários de uso e
+          uma análise de tarefas para orientar as decisões de design do protótipo.
         </p>
-        <div class="stats-row">
-          <div class="stat">
-            <span class="stat-number">00</span>
-            <span class="stat-label">Participantes</span>
+
+        <div class="accordion">
+          <div class="accordion-item active">
+            <button class="accordion-header" type="button" aria-expanded="true">
+              <span class="accordion-number">01</span>
+              <span class="accordion-title">Perfis de usuários</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" width="18" height="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                <div class="profile-compare">
+                  <div class="profile-card">
+                    <h4>Perfil 1 - Adulto maduro independente</h4>
+                    <ul class="kv-list">
+                      <li><span>Faixa etária</span>50 a 64 anos</li>
+                      <li><span>Escolaridade</span>Ensino médio, graduação ou pós-graduação</li>
+                      <li><span>Frequência de uso</span>3 a 6 vezes por semana</li>
+                      <li><span>Realiza Pix sozinho</span>Sim</li>
+                      <li><span>Principal medo</span>Digitar chave Pix incorreta ou enviar valor errado</li>
+                    </ul>
+                  </div>
+                  <div class="profile-card">
+                    <h4>Perfil 2 - Idoso com baixo letramento digital</h4>
+                    <ul class="kv-list">
+                      <li><span>Faixa etária</span>60 a 64 anos</li>
+                      <li><span>Escolaridade</span>Fundamental incompleto ou sem escolarização</li>
+                      <li><span>Frequência de uso</span>1 a 2 vezes por semana</li>
+                      <li><span>Realiza Pix sozinho</span>Às vezes necessita auxílio</li>
+                      <li><span>Principal medo</span>Errar durante o processo ou sofrer golpes</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="stat">
-            <span class="stat-number">00%</span>
-            <span class="stat-label">Métrica X</span>
+
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span class="accordion-number">02</span>
+              <span class="accordion-title">Personas</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" width="18" height="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                <div class="profile-compare">
+                  <div class="profile-card">
+                    <h4>Maria Aparecida, 62 - Aposentada</h4>
+                    <p class="body-text small">Quer realizar Pix e pagar contas sem depender de outras pessoas. Conhecimento tecnológico intermediário.</p>
+                    <p class="body-text small"><strong>Frustrações:</strong> medo de enviar dinheiro para a pessoa errada, insegurança ao confirmar o valor, excesso de informação simultânea na tela.</p>
+                  </div>
+                  <div class="profile-card">
+                    <h4>José Carlos, 64 - Aposentado</h4>
+                    <p class="body-text small">Quer pagar boletos e fazer Pix sozinho, sem precisar pedir ajuda ao filho. Conhecimento tecnológico baixo.</p>
+                    <p class="body-text small"><strong>Frustrações:</strong> letras pequenas, dificuldade para localizar funções, não consegue utilizar QR Code com facilidade.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="stat">
-            <span class="stat-number">00</span>
-            <span class="stat-label">Métrica Y</span>
+
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span class="accordion-number">03</span>
+              <span class="accordion-title">Cenários de uso</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" width="18" height="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                <p class="body-text">
+                  <strong>Maria realiza um Pix para a filha:</strong> antes da confirmação final, o
+                  aplicativo apresenta uma tela simples com nome do destinatário, CPF
+                  parcialmente mascarado, banco e valor. Maria revisa com tranquilidade,
+                  confirma por biometria facial e recebe retorno visual e vibratório de sucesso.
+                </p>
+                <p class="body-text">
+                  <strong>José paga um boleto:</strong> em vez de várias opções simultâneas, o
+                  sistema conduz José por um assistente dividido em etapas. Após ler o código
+                  de barras pela câmera, os dados aparecem em fonte ampliada, com
+                  confirmação destacando valor, beneficiário e vencimento.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span class="accordion-number">04</span>
+              <span class="accordion-title">Análise de tarefas (GOMS/KLM)</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" width="18" height="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                <p class="body-text">
+                  Objetivo: realizar uma transferência Pix para um contato já cadastrado,
+                  decomposta em 7 passos - abrir o aplicativo, selecionar Pix, escolher o
+                  contato, informar o valor, conferir os dados apresentados, confirmar por
+                  biometria ou senha e verificar a mensagem de sucesso.
+                </p>
+                <p class="body-text small">
+                  A análise KLM identifica operadores de <strong>preparação mental (M)</strong>,
+                  <strong>localização visual (P)</strong>, <strong>toque/entrada de dados (K)</strong> e
+                  <strong>resposta do sistema (R)</strong> em cada etapa, evidenciando os pontos de
+                  maior carga cognitiva - sobretudo a conferência do destinatário e do valor
+                  logo antes da confirmação final.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="slide-6" class="slide alt" data-index="5">
-      <div class="slide-content">
-        <p class="eyebrow">05</p>
-        <h2>Conclusão</h2>
+    <section id="slide-7" class="slide" data-index="6">
+      <div class="slide-content wide">
+        <p class="eyebrow">06</p>
+        <h2>Antecipação e Prototipação</h2>
         <p class="body-text">
-          Sintetize aqui as principais conclusões, contribuições do trabalho
-          e possíveis direções para trabalhos futuros.
+          A fidelidade média foi escolhida por permitir avaliar hierarquia da
+          informação, contraste e destaque visual - pontos centrais do problema -
+          sem o custo de detalhamento de um protótipo de alta fidelidade.
         </p>
-        <p class="body-text small">Referências e agradecimentos podem ser incluídos aqui.</p>
+
+        <div class="accordion">
+          <div class="accordion-item active">
+            <button class="accordion-header" type="button" aria-expanded="true">
+              <span class="accordion-number">01</span>
+              <span class="accordion-title">Storyboard</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" width="18" height="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                <p class="body-text">
+                  O storyboard ilustra, quadro a quadro, o fluxo da persona José Carlos, de
+                  64 anos e baixo letramento digital, realizando um Pix com segurança -
+                  aplicando princípios de acessibilidade como fontes e botões maiores,
+                  redução da quantidade de informação por tela, divisão da tarefa em etapas
+                  e confirmação reforçada antes da autenticação.
+                </p>
+                <button type="button" class="zoomable-image" data-full="assets/storyboard.png">
+                  <img src="assets/storyboard.png" alt="Storyboard: José Carlos realiza um Pix com segurança, em seis quadros ilustrando o fluxo da transferência.">
+                  <span class="zoom-hint">Clique para ampliar</span>
+                </button>
+                <p class="body-text">
+                  <a href="https://canva.link/mwcjdzx39bxqanu" target="_blank" rel="noopener noreferrer" class="ref-link">Ver storyboard completo</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span class="accordion-number">02</span>
+              <span class="accordion-title">Protótipo de média fidelidade</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" width="18" height="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                <p class="body-text">
+                  O protótipo representa o fluxo de uma transferência Pix para um contato
+                  cadastrado, utilizando a persona José Carlos. Entre as principais decisões
+                  de design estão:
+                </p>
+                <ul class="bullet-list">
+                  <li>Fontes e botões maiores, com textos objetivos</li>
+                  <li>Redução da quantidade de informação apresentada por tela</li>
+                  <li>Divisão da operação em etapas guiadas</li>
+                  <li>Destaque do nome do destinatário e do valor</li>
+                  <li>Confirmação reforçada antes da transferência</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="slide-8" class="slide alt" data-index="7">
+      <div class="slide-content wide">
+        <p class="eyebrow">07</p>
+        <h2>Avaliação</h2>
+        <p class="body-text">
+          Esta etapa está em planejamento e será conduzida nas próximas fases do
+          projeto, combinando inspeção heurística por especialistas e observação
+          direta de usuários, com o objetivo de avaliar a usabilidade, a facilidade
+          de aprendizagem e a comunicabilidade do protótipo desenvolvido. Como
+          instrumento para a observação, foi elaborada a ficha abaixo.
+        </p>
+
+        <div class="observation-sheet">
+          <div class="observation-header">
+            <h3>Ficha de Observação - Teste de Usabilidade</h3>
+            <p class="observation-task"><strong>Tarefa:</strong> realizar uma transferência Pix de R$ 15,00 para um contato previamente cadastrado.</p>
+          </div>
+
+          <div class="observation-table-wrap">
+            <table class="observation-table">
+              <thead>
+                <tr><th>Critério</th><th>Registro</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>A tarefa foi concluída?</td>
+                  <td><span class="option">Sim</span><span class="option">Parcialmente</span><span class="option">Não</span></td>
+                </tr>
+                <tr>
+                  <td>Tempo para conclusão</td>
+                  <td class="blank-cell"></td>
+                </tr>
+                <tr>
+                  <td>Número de erros</td>
+                  <td class="blank-cell"></td>
+                </tr>
+                <tr>
+                  <td>Necessitou de ajuda?</td>
+                  <td><span class="option">Sim</span><span class="option">Não</span></td>
+                </tr>
+                <tr>
+                  <td>Quantidade de intervenções do avaliador</td>
+                  <td class="blank-cell"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4 class="observation-subtitle">Observação por etapa</h4>
+
+          <div class="observation-table-wrap">
+            <table class="observation-table">
+              <thead>
+                <tr><th>Etapa</th><th>Concluiu sem dificuldade?</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Localizou a opção Pix</td><td><span class="option">Sim</span><span class="option">Não</span></td></tr>
+                <tr><td>Escolheu o destinatário</td><td><span class="option">Sim</span><span class="option">Não</span></td></tr>
+                <tr><td>Digitou o valor</td><td><span class="option">Sim</span><span class="option">Não</span></td></tr>
+                <tr><td>Conferiu os dados</td><td><span class="option">Sim</span><span class="option">Não</span></td></tr>
+                <tr><td>Digitou a senha</td><td><span class="option">Sim</span><span class="option">Não</span></td></tr>
+                <tr><td>Compreendeu a confirmação final</td><td><span class="option">Sim</span><span class="option">Não</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="observation-notes">
+            <span class="observation-notes-label">Problemas observados:</span>
+            <div class="observation-notes-line"></div>
+            <div class="observation-notes-line"></div>
+          </div>
+
+          <h4 class="observation-subtitle">Avaliação do participante (escala de 1 a 5)</h4>
+
+          <div class="observation-table-wrap">
+            <table class="observation-table">
+              <thead>
+                <tr><th>Critério</th><th>Nota</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Facilidade de uso</td>
+                  <td><span class="scale">1</span><span class="scale">2</span><span class="scale">3</span><span class="scale">4</span><span class="scale">5</span></td>
+                </tr>
+                <tr>
+                  <td>Facilidade de leitura</td>
+                  <td><span class="scale">1</span><span class="scale">2</span><span class="scale">3</span><span class="scale">4</span><span class="scale">5</span></td>
+                </tr>
+                <tr>
+                  <td>Facilidade de navegação</td>
+                  <td><span class="scale">1</span><span class="scale">2</span><span class="scale">3</span><span class="scale">4</span><span class="scale">5</span></td>
+                </tr>
+                <tr>
+                  <td>Clareza das informações</td>
+                  <td><span class="scale">1</span><span class="scale">2</span><span class="scale">3</span><span class="scale">4</span><span class="scale">5</span></td>
+                </tr>
+                <tr>
+                  <td>Segurança transmitida pelo aplicativo</td>
+                  <td><span class="scale">1</span><span class="scale">2</span><span class="scale">3</span><span class="scale">4</span><span class="scale">5</span></td>
+                </tr>
+                <tr>
+                  <td>Satisfação geral</td>
+                  <td><span class="scale">1</span><span class="scale">2</span><span class="scale">3</span><span class="scale">4</span><span class="scale">5</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="observation-notes">
+            <span class="observation-notes-label">Sugestões do participante:</span>
+            <div class="observation-notes-line"></div>
+            <div class="observation-notes-line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="slide-9" class="slide" data-index="8">
+      <div class="slide-content">
+        <p class="eyebrow">08</p>
+        <h2>Considerações Finais</h2>
+        <p class="body-text">
+          A pesquisa evidenciou que incluir pessoas da terceira idade em aplicativos
+          bancários exige mais do que ajustes pontuais de interface: envolve repensar
+          a arquitetura da informação, o ritmo da interação e a forma como a confiança
+          é comunicada em cada etapa de uma transferência.
+        </p>
+        <p class="body-text">
+          Entre os principais desafios identificados estão a sobrecarga de informações
+          nas telas de confirmação, o tamanho reduzido de fontes e ícones, e a
+          ansiedade gerada pela irreversibilidade de operações como o Pix. Como
+          possibilidades futuras, destacam-se a validação do protótipo por meio de
+          avaliações de usabilidade com o público idoso, a exploração de fluxos
+          guiados por etapas e o aprofundamento do diálogo entre a Pluralidade e
+          Decolonialidade e o design de sistemas financeiros digitais.
+        </p>
+        <p class="body-text small">
+          Vale registrar uma correlação observada nos dados: participantes que usam o
+          aplicativo com mais frequência ao longo da semana tendem a relatar mais
+          autonomia e menos receio, sugerindo que a prática de uso também influencia
+          na facilidade percebida.
+        </p>
 
         <div class="references" id="referencias">
           <h3>Referências</h3>
@@ -263,7 +618,7 @@
               <a href="https://www.sbc.org.br/images/flippingbook/livros/grandes-desafios-2022-2032/" target="_blank" rel="noopener noreferrer">Acessar fonte</a>
             </li>
             <li id="ref-2">
-              ISO 9241-210:2019 — <em>Ergonomics of Human-System Interaction – Human-centred Design for Interactive Systems</em>.
+              ISO 9241-210:2019 - <em>Ergonomics of Human-System Interaction – Human-centred Design for Interactive Systems</em>.
               <a href="https://www.iso.org/standard/77520.html" target="_blank" rel="noopener noreferrer">Acessar fonte</a>
             </li>
             <li id="ref-3">
@@ -279,7 +634,81 @@
       </div>
     </section>
 
+    <section id="slide-10" class="slide alt" data-index="9">
+      <div class="slide-content">
+        <p class="eyebrow">09</p>
+        <h2>Protótipo Navegável</h2>
+        <p class="body-text">
+          Experimente o fluxo do storyboard: toque nas telas do celular abaixo para
+          seguir José Carlos enviando um Pix de R$ 15,00 para Maria Rosário.
+        </p>
+
+        <div class="phone-mock">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+
+              <div class="app-screen active" data-screen="home">
+                <p class="app-topbar">Bem-vindo, José</p>
+                <p class="app-balance">Saldo <strong>R$ 198,00</strong></p>
+                <div class="app-grid">
+                  <button class="app-tile" data-goto="pix">Pix</button>
+                  <button class="app-tile" data-goto="home">Pagar Contas</button>
+                  <button class="app-tile" data-goto="home">Cartão</button>
+                </div>
+                <div class="app-bottom"><span>Configurações</span><span>Ajuda</span></div>
+              </div>
+
+              <div class="app-screen" data-screen="pix">
+                <button class="app-back" type="button" data-goto="home" aria-label="Voltar">&larr;</button>
+                <button class="app-new-transfer" type="button" data-goto="pix">Nova transferência <span>&rarr;</span></button>
+                <p class="app-contacts-label">Lista de contatos recentes</p>
+                <button class="app-contact" type="button" data-goto="amount">Maria Rosário</button>
+                <button class="app-contact" type="button" data-goto="pix">Antônio Dias</button>
+                <button class="app-contact" type="button" data-goto="pix">Lucas Reis</button>
+                <div class="app-scan-row"><span>QR Code</span><span>Copia e Cola</span></div>
+              </div>
+
+              <div class="app-screen" data-screen="amount">
+                <button class="app-back" type="button" data-goto="pix" aria-label="Voltar">&larr;</button>
+                <p class="app-label">Saldo disponível: R$ 198,00</p>
+                <p class="app-amount">R$ 15,00</p>
+                <p class="app-label">Para: Maria Rosário</p>
+                <button class="app-primary-btn" type="button" data-goto="confirm">Continuar</button>
+              </div>
+
+              <div class="app-screen" data-screen="confirm">
+                <button class="app-back" type="button" data-goto="amount" aria-label="Voltar">&larr;</button>
+                <div class="app-confirm-card">
+                  <p><span>Destinatário</span>Maria Rosário</p>
+                  <p><span>Banco</span>Bradesco</p>
+                  <p><span>Valor</span>R$ 15,00</p>
+                </div>
+                <button class="app-primary-btn" type="button" data-goto="success">Enviar Pix</button>
+              </div>
+
+              <div class="app-screen" data-screen="success">
+                <div class="app-success-icon">&#10003;</div>
+                <p class="app-success-text">Transferência realizada com sucesso!</p>
+                <p class="app-success-sub">Pix enviado para Maria Rosário — R$ 15,00</p>
+                <button class="app-secondary-btn" type="button" data-goto="success">Ver comprovante</button>
+                <button class="app-primary-btn" type="button" data-goto="home">Voltar ao menu</button>
+              </div>
+
+            </div>
+            <div class="phone-home-indicator"></div>
+          </div>
+          <p class="phone-hint">Toque nos botões da tela para navegar pelo fluxo.</p>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <div id="image-lightbox" class="image-lightbox" aria-hidden="true">
+    <button type="button" id="lightbox-close" class="lightbox-close" aria-label="Fechar imagem ampliada">&times;</button>
+    <img id="lightbox-image" src="" alt="">
+  </div>
 
   <script src="script.js"></script>
 </body>
