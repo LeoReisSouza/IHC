@@ -156,6 +156,16 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeLightbox();
 });
 
+document.querySelectorAll(".app-eye-toggle").forEach((button) => {
+  button.addEventListener("click", () => {
+    const amount = button.parentElement.querySelector(".app-balance-amount");
+    const isHidden = button.classList.toggle("hidden-balance");
+    amount.textContent = isHidden ? "••••••" : amount.dataset.value;
+    button.setAttribute("aria-pressed", isHidden);
+    button.setAttribute("aria-label", isHidden ? "Mostrar saldo" : "Ocultar saldo");
+  });
+});
+
 document.querySelectorAll(".phone-screen [data-goto]").forEach((button) => {
   button.addEventListener("click", () => {
     const target = button.dataset.goto;

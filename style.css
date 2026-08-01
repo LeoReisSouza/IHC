@@ -1013,11 +1013,40 @@ h2 {
   margin-bottom: 0.3rem;
 }
 
+.app-balance-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
 .app-balance {
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--fg);
-  margin-bottom: 1.5rem;
+}
+
+.app-eye-toggle {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-eye-toggle .icon-eye-off {
+  display: none;
+}
+
+.app-eye-toggle.hidden-balance .icon-eye {
+  display: none;
+}
+
+.app-eye-toggle.hidden-balance .icon-eye-off {
+  display: block;
 }
 
 .app-grid {
@@ -1027,11 +1056,16 @@ h2 {
 }
 
 .app-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   background: rgba(52, 80, 106, 0.08);
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 1rem 0.6rem;
-  font-size: 0.82rem;
+  padding: 1.1rem 0.6rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--accent);
   cursor: pointer;
@@ -1041,21 +1075,30 @@ h2 {
 .app-bottom {
   margin-top: auto;
   display: flex;
-  justify-content: space-between;
-  font-size: 0.72rem;
+  justify-content: space-around;
+  font-size: 0.7rem;
   color: var(--muted);
   padding-top: 1rem;
+}
+
+.app-bottom span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 .app-back {
   align-self: flex-start;
   background: none;
   border: none;
-  font-size: 1.2rem;
   color: var(--fg);
   cursor: pointer;
-  padding: 0;
-  margin-bottom: 0.7rem;
+  padding: 8px;
+  margin: -8px 0 0.6rem -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .app-new-transfer {
