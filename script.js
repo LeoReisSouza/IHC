@@ -156,6 +156,21 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeLightbox();
 });
 
+document.querySelectorAll(".sheet-tabs").forEach((tabGroup) => {
+  const tabs = tabGroup.querySelectorAll(".sheet-tab");
+  const panels = tabGroup.parentElement.querySelectorAll(".sheet-panel");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => t.classList.remove("active"));
+      panels.forEach((p) => p.classList.remove("active"));
+      tab.classList.add("active");
+      tabGroup.parentElement
+        .querySelector(`.sheet-panel[data-panel="${tab.dataset.tab}"]`)
+        .classList.add("active");
+    });
+  });
+});
+
 document.querySelectorAll(".app-eye-toggle").forEach((button) => {
   button.addEventListener("click", () => {
     const amount = button.parentElement.querySelector(".app-balance-amount");

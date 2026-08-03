@@ -471,13 +471,19 @@
         <p class="eyebrow">07</p>
         <h2>Avaliação</h2>
         <p class="body-text">
-          Esta etapa está em planejamento e será conduzida nas próximas fases do
-          projeto, combinando inspeção heurística por especialistas e observação
-          direta de usuários, com o objetivo de avaliar a usabilidade, a facilidade
-          de aprendizagem e a comunicabilidade do protótipo desenvolvido. Como
-          instrumento para a observação, foi elaborada a ficha abaixo.
+          Nesta etapa, foi realizada uma entrevista com uma das pessoas que
+          respondeu ao questionário inicial. O objetivo foi avaliar a usabilidade
+          do aplicativo junto a uma pessoa da terceira idade, buscando
+          compreender o nível de dificuldade e de compreensão apresentado por
+          ela ao realizar uma transferência via Pix para um contato cadastrado.
         </p>
 
+        <div class="sheet-tabs" role="tablist">
+          <button type="button" class="sheet-tab active" data-tab="blank">Ficha do instrumento</button>
+          <button type="button" class="sheet-tab" data-tab="filled">Resposta registrada</button>
+        </div>
+
+        <div class="sheet-panel active" data-panel="blank">
         <div class="observation-sheet">
           <div class="observation-header">
             <h3>Ficha de Observação - Teste de Usabilidade</h3>
@@ -579,6 +585,114 @@
             <div class="observation-notes-line"></div>
             <div class="observation-notes-line"></div>
           </div>
+        </div>
+        </div>
+
+        <div class="sheet-panel" data-panel="filled">
+        <div class="observation-sheet">
+          <div class="observation-header">
+            <h3>Ficha de Observação - Resposta Registrada</h3>
+            <p class="observation-task"><strong>Tarefa:</strong> realizar uma transferência Pix de R$ 15,00 para um contato previamente cadastrado.</p>
+            <p class="observation-participant">Participante: mulher, 50+ anos.</p>
+          </div>
+
+          <div class="observation-table-wrap">
+            <table class="observation-table answered">
+              <thead>
+                <tr><th>Critério</th><th>Registro</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>A tarefa foi concluída?</td>
+                  <td><span class="option selected">Sim</span><span class="option">Parcialmente</span><span class="option">Não</span></td>
+                </tr>
+                <tr>
+                  <td>Tempo para conclusão</td>
+                  <td class="filled-cell">2 minutos</td>
+                </tr>
+                <tr>
+                  <td>Número de erros</td>
+                  <td class="filled-cell">Nenhum</td>
+                </tr>
+                <tr>
+                  <td>Necessitou de ajuda?</td>
+                  <td><span class="option">Sim</span><span class="option selected">Não</span></td>
+                </tr>
+                <tr>
+                  <td>Quantidade de intervenções do avaliador</td>
+                  <td class="filled-cell">Nenhuma</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4 class="observation-subtitle">Observação por etapa</h4>
+
+          <div class="observation-table-wrap">
+            <table class="observation-table answered">
+              <thead>
+                <tr><th>Etapa</th><th>Concluiu sem dificuldade?</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Localizou a opção Pix</td><td><span class="option selected">Sim</span><span class="option">Não</span></td></tr>
+                <tr><td>Escolheu o destinatário</td><td><span class="option selected">Sim</span><span class="option">Não</span></td></tr>
+                <tr><td>Digitou o valor</td><td><span class="option selected">Sim</span><span class="option">Não</span></td></tr>
+                <tr><td>Conferiu os dados</td><td><span class="option selected">Sim</span><span class="option">Não</span></td></tr>
+                <tr class="note-row"><td colspan="2">Executou de forma aparentemente automática, com pouca atenção aos dados exibidos — o foco parecia estar mais em cumprir os passos do que em revisar as informações.</td></tr>
+                <tr><td>Digitou a senha</td><td><span class="option selected">Sim</span><span class="option">Não</span></td></tr>
+                <tr><td>Compreendeu a confirmação final</td><td><span class="option selected">Sim</span><span class="option">Não</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="observation-notes">
+            <span class="observation-notes-label">Problemas observados:</span>
+            <p class="observation-notes-text">Conferência dos dados realizada de forma automática, sem atenção plena às informações exibidas na tela antes da confirmação.</p>
+          </div>
+
+          <h4 class="observation-subtitle">Avaliação do participante (escala de 1 a 5)</h4>
+
+          <div class="observation-table-wrap">
+            <table class="observation-table answered">
+              <thead>
+                <tr><th>Critério</th><th>Nota</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Facilidade de uso</td>
+                  <td><span class="scale">1</span><span class="scale selected">2</span><span class="scale">3</span><span class="scale">4</span><span class="scale">5</span></td>
+                </tr>
+                <tr>
+                  <td>Facilidade de leitura</td>
+                  <td><span class="scale">1</span><span class="scale selected">2</span><span class="scale">3</span><span class="scale">4</span><span class="scale">5</span></td>
+                </tr>
+                <tr>
+                  <td>Facilidade de navegação</td>
+                  <td><span class="scale">1</span><span class="scale selected">2</span><span class="scale">3</span><span class="scale">4</span><span class="scale">5</span></td>
+                </tr>
+                <tr class="note-row"><td colspan="2">Relatou que o aplicativo apresenta muitas informações na tela.</td></tr>
+                <tr>
+                  <td>Clareza das informações</td>
+                  <td><span class="scale">1</span><span class="scale">2</span><span class="scale selected">3</span><span class="scale">4</span><span class="scale">5</span></td>
+                </tr>
+                <tr>
+                  <td>Segurança transmitida pelo aplicativo</td>
+                  <td><span class="scale">1</span><span class="scale">2</span><span class="scale">3</span><span class="scale selected">4</span><span class="scale">5</span></td>
+                </tr>
+                <tr>
+                  <td>Satisfação geral</td>
+                  <td><span class="scale">1</span><span class="scale">2</span><span class="scale selected">3</span><span class="scale">4</span><span class="scale">5</span></td>
+                </tr>
+                <tr class="note-row"><td colspan="2">Comentário da participante: "poderia ser mais fácil".</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="observation-notes">
+            <span class="observation-notes-label">Sugestões do participante:</span>
+            <p class="observation-notes-text">Relatou haver muitas informações na tela e que o processo de transferência poderia ser mais simples.</p>
+          </div>
+        </div>
         </div>
       </div>
     </section>
